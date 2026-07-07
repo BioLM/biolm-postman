@@ -6076,7 +6076,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"params\": {\n    \"include\": [\n      \"vector\"\n    ]\n  },\n  \"items\": [\n    {\n      \"sequence\": \"GLPRKILCAI\"\n    },\n    {\n      \"sequence\": \"KKKGKCKGPLKLVCKC\"\n    }\n  ]\n}",
+							"raw": "{\n  \"params\": {\n    \"include\": [\n      \"vector\"\n    ]\n  },\n  \"items\": [\n    {\n      \"sequence\": \"GLPRKILCAI\"\n    },\n    {\n      \"sequence\": \"KGKCKGPLKLVCKC\"\n    }\n  ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
