@@ -1,0 +1,20 @@
+name: Notify biolm-models-mcp on collection update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'biolm-public/biolm-public.json'
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fire repository_dispatch to biolm-models-mcp
+        run: |
+          curl -fsSL -X POST \
+            -H "Authorization: Bearer ${{ secrets.NOTIFY_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/BioLM/biolm-models-mcp/dispatches \
+            -d '{"event_type":"postman-collection-updated"}'
